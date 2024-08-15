@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# This script checks a log file for ip addresses that have HTTP 404 errors, counts the occurrences
+# and displays the results
+# Checks if the logfile was provided and if it exists
+
 # Function to display usage
 usage() {
     echo "Usage: $0 <logfile>"
@@ -23,7 +27,7 @@ logfile="$1"
 # Process the logfile line by line
 while IFS= read -r line; do
     # Extract IPs associated with "404" errors
-    if echo "$line" | grep -q "404"; then
+    if echo "$line" | grep -q " 404 "; then
         ip=$(echo "$line" | awk '{print $1}' | awk -F',"' '{print $2}')
         echo "$ip"
     fi
