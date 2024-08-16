@@ -6,11 +6,19 @@
 
 #Displays a message saying "Warning: Directory exceeds 100MB" if the size is greater than 100MB.
 
-Directory=$1
+
+# Check if the directory is provided as an argument
+if [ -z "$1" ]; then
+    # If no argument is provided, prompt the user for a directory
+    read -p "Please enter the directory you'd like to monitor: " Directory
+else
+    # If an argument is provided, use it as the directory
+    Directory=$1
+fi
+
 
 
 # Check if the directory exists
-
 if [ ! -d "$Directory" ]; then
     echo "$Directory does not exist."
     exit 1
