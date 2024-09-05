@@ -20,12 +20,12 @@ url = "https://linkedin-data-api.p.rapidapi.com/search-jobs-v2"
 
 querystring = {
     "keywords":"Cloud Infrastructure",
-    "locationId":"103644278",
+    "locationId":"103644278", # this is the geoId for United States
     "datePosted":"pastWeek",
     "salary":"120k+",
     "jobType":"contract",
     "experienceLevel":"entryLevel",
-    "titleIds":"25764",
+    "titleIds":"25764", # this is the titleId for "DevOps Engineer"
     "onsiteRemote":"hybrid",
     "sort":"mostRelevant"
     
