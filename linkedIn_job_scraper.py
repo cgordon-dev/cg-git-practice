@@ -1,6 +1,15 @@
 import requests
 import json
 
+# This script uses the RapidAPI LinkedIn web scraper to pull specified job search results
+# using the /search-jobs-v2 end point
+# Then, I print out the following search
+
+""" 
+Job Search : Hybrid Entry-level DevOps Engineer Contract jobs in the United States paying at least an
+$120k salary, posted with the past week and sorted by most relevant.
+
+"""
 
 url = "https://linkedin-data-api.p.rapidapi.com/search-jobs-v2"
 
