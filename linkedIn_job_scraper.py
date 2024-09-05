@@ -11,6 +11,11 @@ $120k salary, posted with the past week and sorted by most relevant.
 
 """
 
+# I use a try-except block to handle error handling for the the API call.
+# Within the try-except block, I use a conditional statement to check if the HTTP GET request is successful
+# and the results are not empty. Then I use a for loop to extract the information I want from the json data in a structured,
+# readable format.
+
 url = "https://linkedin-data-api.p.rapidapi.com/search-jobs-v2"
 
 querystring = {
